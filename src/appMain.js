@@ -25,9 +25,9 @@ requirejs.config({
 
 
 define(
-    ['jquery','underscore','backbone'],
+    ['jquery','underscore','backbone','modules/dirtyModule'],
 
-    function (jQueryLocal,underscoreLocal,backboneLocal) {
+    function (jQueryLocal,underscoreLocal,backboneLocal,dirtyModule) {
     	/*
         console.log('local', jQueryLocal);
         console.log('local', underscoreLocal);
@@ -37,9 +37,6 @@ define(
         console.log('global', Backbone);
         */
        console.log(jQueryLocal('#container'));
-       var a={'nameIs':'saumya'};
-       console.log(underscoreLocal('#container'))
+       console.log(underscoreLocal('#container'));
     }
 );
-
-
