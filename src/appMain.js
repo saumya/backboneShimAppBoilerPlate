@@ -17,7 +17,7 @@ requirejs.config({
         	exports: '_'
         },
         'backbone': {
-            deps: ['jquery'],
+            deps: ['jquery','underscore'],
             exports: 'Backbone'
         }
     }// end Shim Configuration
@@ -25,9 +25,9 @@ requirejs.config({
 
 
 define(
-    ['jquery','underscore','backbone','modules/dirtyModule'],
-
-    function (jQueryLocal,underscoreLocal,backboneLocal,dirtyModule) {
+    ['jquery','underscore','backbone'],
+    
+    function (jQueryLocal,underscoreLocal,backboneLocal) {
     	/*
         console.log('local', jQueryLocal);
         console.log('local', underscoreLocal);
@@ -36,7 +36,15 @@ define(
         console.log('global', _);
         console.log('global', Backbone);
         */
-       console.log(jQueryLocal('#container'));
-       console.log(underscoreLocal('#container'));
+       	/*
+       	console.log(jQueryLocal('#container'));
+       	console.log(underscoreLocal('#container'));
+       	*/
+       	console.log('Application initalisation');
+       	//finally the call to the application initialisation
+       	require(['modules/appEntryModule'],function(ApplicationEntry){
+			console.log('Entry to the application Entry code');
+			//We are not doing anything specifically here as a space for flexibility
+		});
     }
 );
