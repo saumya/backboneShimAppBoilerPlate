@@ -6,7 +6,7 @@ define('modules/collection/todosCollection',
 			  model: TodoModel,
 			  	//localStorage: new Store('todos-backbone'),  
 			  initialize: function(){
-			      console.log('This COLLECTION has been initialized.');
+			      console.log('Todos COLLECTION has been initialized.');
 			       /*
 			       console.log(this);
 			       var t1=new TodoModel({title: 'first',completed: false});

@@ -42,7 +42,7 @@ define(
        	*/
        	console.log('Application initalisation');
        	//finally the call to the application initialisation
-       	require(['modules/appEntryModule'],function(ApplicationEntry){
+       	require(['modules/dirtyModule','modules/appEntryModule'],function(DirtyModule,ApplicationEntry){
 			console.log('Entry to the application Entry code');
 			//We are not doing anything specifically here as a space for flexibility
 		});
